@@ -7,6 +7,10 @@
 body {
     overflow-x: hidden;
 }
+.portfolio-item img {
+    width: 163px;
+    height: 390px;
+}
 @font-face {
     font-family: rezNormal;
     src: url(../fonts/REZ.ttf);
