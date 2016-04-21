@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 .portfolio-item img {
-    width: 163px;
+    width: 100%;
     height: 390px;
 }
 @font-face {
