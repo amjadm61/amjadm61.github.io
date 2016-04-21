@@ -126,10 +126,7 @@ header .intro-text .skills {
     header .intro-text .skills {
         font-size: 1.75em;
     }
-    .portfolio-item img {
-    width: 100%;
-    height: 390px;
-}
+    
 }
 
 @media(min-width:768px) {
