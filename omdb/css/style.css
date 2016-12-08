@@ -1,0 +1,233 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@font-face{
+	font-family:"Helvetica-bold";
+	src:url("../font/HelveticaBold.ttf");
+}
+@font-face{
+	font-family:"Helvetica-normal";
+	src:url("../font/HelveticaMedium.ttf");
+}
+* {
+	font-family: Helvetica-normal;
+}
+body {
+	background: #f5ab35;
+	font-family: Helvetica-normal;
+}
+p {
+	
+}
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+.text-center {
+	text-align: center;
+}
+.section1 {
+	padding-top: 19%;
+	padding-bottom: 19%;
+}
+.search-heading {
+	background: #f7bc5d;
+	padding: 35px 0;
+	color: #fff;
+	font-size: 30px;
+}
+.search-form {
+	position: relative;
+	margin-top: 123px;
+	margin-bottom: 55px;
+}
+.search-text {
+	width: 521px;
+	height: 65px;
+	background: none;
+	border: 2px solid #fff;
+	border-radius: 42px;
+	color: #fff;
+	padding: 0 30px 0 85px;
+	font-size: 25px;
+	font-family: Helvetica-normal;
+}
+.search-btn {
+	position: absolute;
+	left: 448px;
+	top: 15px;
+	border: none;
+	background: url('../img/search-icon.png');
+	height: 44px;
+	width: 44px;
+}
+.search-text::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  	font-family: Helvetica-normal;
+  	color: #fff;
+	font-size: 26px;
+	text-align: center;
+}
+.search-text::-moz-placeholder { /* Firefox 19+ */
+ 	font-family: Helvetica-normal;
+ 	color: #fff;
+	font-size: 26px;
+	text-align: center;
+}
+.search-text:-ms-input-placeholder { /* IE 10+ */
+  	font-family: Helvetica-normal;
+  	color: #fff;
+	font-size: 26px;
+	text-align: center;
+}
+.search-text:-moz-placeholder { /* Firefox 18- */
+ 	font-family: Helvetica-normal;
+ 	color: #fff;
+	font-size: 26px;
+	text-align: center;
+}
+.section2 h2 {
+	color: #fff;
+	font-size: 40px;
+	line-height: 52px;
+	margin-top: 150px;
+	margin-bottom: 200px;
+}
+.search-result-txt p {
+	font-size: 20px;
+	color: #ffecec;
+	font-family: Helvetica-normal;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.search-result-txt h2 {
+	color: #fff;
+	font-family: Helvetica-bold;
+	font-size: 27px;
+}
+.search-rslt-bck {
+	background: #fff;
+	display: flex;
+}
+.rslt-item {
+	height: 500px;
+	width: 490px;
+	float: left;
+	background: red;
+	margin-right: 10px;
+	margin-top: 10px;
+	position: relative;
+	cursor: pointer;
+}
+.rslt-item img {
+	width: 490px;
+	height: 500px;
+}
+.clear {
+	clear: both;
+}
+.search-rslt-short {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 467px;
+	background: #0009;
+	color: #fff;
+	padding: 30px 5px 30px 20px;
+}
+.search-rslt-short h3 {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+.search-rslt-short p {
+	font-size: 20px;
+	color: #ddd;
+}
+.search-result-txt {
+	display: none;
+}
+.modal-main {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #665a5a;
+	overflow-y: auto;
+	height: 100%;
+	display: none;
+}
+.modal-content {
+	width: 504px;
+	margin: 0 auto;
+	position: relative;
+	background: #fff;
+
+}
+.modal-content .poster {
+	width: 100%;
+}
+.close-modal {
+	position: absolute;
+	top: 46px;
+	cursor: pointer;
+	left: 18px;
+}
+.modal-title {
+	background: #f5ab35;
+	padding: 32px 20px;
+	color: #fff;
+	margin-top: -3px;
+	margin-bottom: 25px;
+}
+.modal-content h3 {
+	font-size: 25px;
+	font-family: Helvetica-bold;
+	margin-bottom: 10px;
+
+}
+.modal-title p {
+	font-size: 18px;
+}
+.modal-content > p {
+	font-size: 18px;
+	padding: 0 15px 50px 15px;
+}

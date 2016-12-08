@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+	<title>OMDB</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="section1 text-center">
+			<img src="img/omdb-logo.png" />
+		</div>
+	</div>
+	<p class="search-heading text-center">Search for your favourite movie...</p>
+	<div clas=="wrapper">
+		<div class="section2 text-center">
+			<form class="search-form" method="post">
+				<input class="search-text" type="text" name="s" placeholder="SEARCH" required>
+				<img src="img/search-icon.png" class="search-btn" />
+			</form>
+			<h2>THE LARGEST<br/> ONLINE MOVIE DATABASE</h2>
+		</div>
+		<div class="search-result-txt text-center">
+			<h2>Search Results</h2>
+			<p></p>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="search-rslt-bck">
+		<div class="wrapper">
+			
+		</div>
+	</div>
+
+	<div class="modal-main">
+		<div class="wrapper">
+
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('input').on('keyup',function(){
+				$(".search-form").submit(function (e) {
+    				e.preventDefault();
+    			});
+    			var l = $(this).val().length;
+    			var title = $(this).val();
+    			if (l >=3) {
+    				$('.search-rslt-bck .wrapper').empty();
+    				$('.search-result-txt p').text(title);
+    				$('.search-result-txt').show();
+    				//submit search value to omdbapi
+				      $.ajax({
+						url: "http://www.omdbapi.com/?",
+						type: "get",
+						data:{s:title},
+						success: function(response) {
+						   	for(var i = 0; i < response.Search.length; i++) {
+						   		var PosterImage = response.Search[i].Poster;
+						   		if (response.Search[i].Poster == 'N/A') {
+						   			PosterImage = 'http://app1.pinalcountyaz.gov/ALERT_viewer/metadata/images/No_available_image.gif';
+						   		}
+       							$('.search-rslt-bck .wrapper').prepend('<div id="'+ response.Search[i].imdbID +'" class="rslt-item"><img src="' + PosterImage + '" /><div class="search-rslt-short"><h3>' + response.Search[i].Title + '</h3><p>Release Year: '+ response.Search[i].Year +'</p></div></div>');
+   							}
+						},
+						error: function(xhr) {
+						    alert('We are facing some issue, pls try again later');
+						}
+					  });
+    			}
+			});
+			$(document).on('click', '.rslt-item', function(){
+      			var imdbID = $(this).attr('id');
+      			$('.modal-main .wrapper').empty();
+      			$('.modal-main').show();
+      			$.ajax({
+						url: "http://www.omdbapi.com/?",
+						type: "get",
+						data:{i:imdbID, plot:'full'},
+						success: function(response) {
+							var PosterImage = response.Poster;
+						   	if (response.Poster == 'N/A') {
+						   		PosterImage = 'http://app1.pinalcountyaz.gov/ALERT_viewer/metadata/images/No_available_image.gif';
+						   	}
+       						$('.modal-main .wrapper').prepend('<div class="modal-content"><img class="poster" src="'+ PosterImage +'" /><div class="modal-title"><h3>'+ response.Title +'</h3><p>Release Year: '+ response.Year +'</p></div><p>'+ response.Plot +'</p><img class="close-modal" src="img/back-arrow-circle.png" /></div>');
+       						$('.close-modal').click( function(){
+      							$('.modal-main').hide();
+      						});
+						},
+						error: function(xhr) {
+						    alert('We are facing some issue, pls try again later');
+						}
+				});
+      		});
+      		
+		});
+		
+	</script>
+</body>
+</html>
