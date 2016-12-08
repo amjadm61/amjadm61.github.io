@@ -170,7 +170,7 @@ p {
 	bottom: 0;
 	left: 0;
 	width: 467px;
-	background: #0009;
+	background: rgba(0, 0, 0, 0.74);
 	color: #fff;
 	padding: 30px 5px 30px 20px;
 }
