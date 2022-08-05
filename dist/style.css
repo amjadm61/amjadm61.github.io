@@ -158,20 +158,18 @@ img {
     margin-top: 2rem;
 }
 
-.brands img {
-    width: 100%;
-    max-height: 40px;
-    object-fit: contain;
-}
+
 
 .main .work {
     margin-top: 5rem;
 }
 
-.main .work a {
+.main .work img {
     width: 28%;
-    text-decoration: none;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    max-height: 40px;
+    object-fit: contain;
+    opacity: 0.6;
 }
 
 .main .contact {
@@ -200,9 +198,6 @@ img {
     display: none;
 }
 @media screen and (max-width: 700px) {
-    .main .work a {
-        width: 44%;
-    }
     .brands img {
         max-height: 35px;
     }
