@@ -197,6 +197,9 @@ img {
 .main .contact a:after {
     display: none;
 }
+.width-full {
+    width: 100% !important;
+}
 @media screen and (max-width: 700px) {
     .brands img {
         max-height: 35px;
