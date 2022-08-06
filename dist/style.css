@@ -200,6 +200,15 @@ img {
 .width-full {
     width: 100% !important;
 }
+.main .location {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 2px;
+}
+.location svg {
+    width: 15px;
+    vertical-align: middle;
+}
 @media screen and (max-width: 700px) {
     .brands img {
         max-height: 35px;
