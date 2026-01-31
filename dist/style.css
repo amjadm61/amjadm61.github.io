@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; 
+}
+body {
+    line-height: 1;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.6rem;
+    color: #000;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: #fff;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+::-moz-selection {
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+}
+
+.main {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+    .main {
+        padding: 5rem 0;
+    }
+}
+
+.main>div {
+    width: 500px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.main h1 {
+    font-size: 2.95rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.main h2 {
+    font-size: 1.6rem;
+    line-height: 1;
+    margin-bottom: 4rem;
+}
+
+.main h3 {
+    margin: 5rem 0;
+}
+
+.main p {
+    font-size: 1.6rem;
+    text-align: justify;
+}
+
+.main a {
+    color: #fff;
+    position: relative;
+    font-weight: 700;
+}
+
+.main .brands {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+
+
+.main .work {
+    margin-top: 5rem;
+}
+
+.main .work img {
+    width: 28%;
+    margin-bottom: 20px;
+    max-height: 40px;
+    object-fit: contain;
+    opacity: 0.6;
+}
+
+.main .contact {
+    margin-top: 6rem;
+}
+
+.main .contact a {
+    opacity: 0.6;
+    font-size: 1.4rem;
+    font-weight: normal;
+    display: inline-block;
+    margin: 0 1rem;
+    will-change: opacity;
+    -webkit-transition: opacity 0.3s cubic-bezier(0.15, 0.9, 0.34, 0.95);
+    -moz-transition: opacity 0.3s cubic-bezier(0.15, 0.9, 0.34, 0.95);
+    -ms-transition: opacity 0.3s cubic-bezier(0.15, 0.9, 0.34, 0.95);
+    -o-transition: opacity 0.3s cubic-bezier(0.15, 0.9, 0.34, 0.95);
+    transition: opacity 0.3s cubic-bezier(0.15, 0.9, 0.34, 0.95);
+}
+
+.main .contact a:hover {
+    opacity: 1;
+}
+
+.main .contact a:after {
+    display: none;
+}
+.width-full {
+    width: 100% !important;
+}
+.main .location {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 2px;
+}
+.location svg {
+    width: 15px;
+    vertical-align: middle;
+}
+@media screen and (max-width: 700px) {
+    .brands img {
+        max-height: 35px;
+    }
+}
